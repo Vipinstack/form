@@ -1,0 +1,25 @@
+.fromInputs{
+    display: flex;
+    flex-direction: column;
+    padding: 0.25rem/* 4px */;
+    width: 285px;
+}
+
+.error{
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+}
+
+input:invalid[focused="true"]{
+    border: 1px dotted red;
+}
+input:valid[focused="true"]{
+    border: 1px dotted green;
+    
+}
+
+input:invalid[focused="true"] ~ .error{
+    display: block;
+}
